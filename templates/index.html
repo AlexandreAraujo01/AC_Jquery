@@ -30,7 +30,7 @@
                         success: function(callback) {
                             console.log(callback);
                             $('#resp_name').val('Primeiro Nome:'+callback.nome);
-                            $('#resp_last').val('Segundo Nome:'+callback.nome);
+                            $('#resp_last').val('Segundo Nome:'+callback.segundo);
                             $('#resp_role').val('Função:'+callback.role)
                         },
                         error: function() {
