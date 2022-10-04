@@ -12,10 +12,10 @@ def main():
 @app.route('/api/exemplo', methods=['POST'])
 def exemplo():
     json = request.get_json()
-    nome = json['first_name']
-    segundo = json['last_name']
-    role = json['role']
-    return jsonify(nome=nome,segundo=segundo,role=role)
+    nome = json['first_name'].upper()
+    time = json['time'].upper()
+    role = json['role'].upper()
+    return jsonify(nome=nome,time=time,role=role)
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
